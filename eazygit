@@ -104,7 +104,7 @@ if [ "$1" == "-c" ]; then
       if [ "$3" == "-h" ]; then
          git commit -m "$4"
        if [ "$5" == "-t" ]; then
-         git branch -M "$6"
+         git branch -M $6
          if [ "$7" == "-b" ]; then
             git remote add origin $8
          fi
@@ -117,7 +117,7 @@ if [ "$1" == "-c" ]; then
             git remote add origin $8
          fi
       fi
-      git push -u origin  "$6"
+      git push -u origin $6
 
    # If file not exist
    elif [ ! -e "$2" ]; then
